@@ -3,31 +3,30 @@ package com.company;
 public class SomeMath {
 
     public static int total5(int a, int b, int c, int d, int e) {
-        int sum = a + b + c + d + e;
-        return sum;
+        return a + b + c + d + e;
     }
 
     public static double average5(int a, int b, int c, int d, int e) {
         int sum = a + b + c + d + e;
-        double avg = sum / 5;
-        return avg;
+        return sum / 5;
     }
 
-    public static int largest5(double a, double b, double c, double d,
+    public static double largest5(double a, double b, double c, double d,
                                double e) {
-
-        for (int i = 0; i < largest5.length; i++) {
-            if ( > largest.length) {
-                System.out.println
+        double[] largest = {a,b,c,d,e};
+        double max = largest[0];
+        for (int i = 0; i < largest.length; i++) {
+            if (largest[i] > max){
+                max = largest[i];
             }
         }
-        return largest;
+        return max;
     }
 
 
-    public static void main(String[] args) {
-        System.out.println(total5(1,2,3,4,5));
-        System.out.println(average5(1,3,5,7,9));
-        System.out.println(largest5(42.0,35.1,2.3,40.2,15.6));
+        public static void main (String[]args){
+            System.out.println(total5(1, 2, 3, 4, 5));
+            System.out.println(average5(1, 3, 5, 7, 9));
+            System.out.println(largest5(42.0,35.1,2.3,40.2,15.6));
+        }
     }
-}

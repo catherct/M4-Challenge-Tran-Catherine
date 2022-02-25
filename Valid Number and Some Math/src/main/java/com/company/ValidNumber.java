@@ -14,16 +14,14 @@ public class ValidNumber {
         String userInput = myScanner.nextLine();
         int numberEntered = Integer.parseInt(userInput);
 
-//        //while loop until valid number is entered
-//        while (numberEntered > 10 || numberEntered <= 0) {
-//            System.out.println("You must enter a number between 1 and 10. " +
-//                    "Please try again.");
-//        }
-
-//        do {
-//            System.out.println("You must enter a number between 1 and 10. " +
-//                    "Please try again.");
-//        } while (numberEntered > 10 || numberEntered <= 0);
+        //while loop until valid number is entered
+        while (numberEntered > 10 || numberEntered <= 0) {
+            System.out.println("You must enter a number between 1 and 10. " +
+                    "Please try again.");
+                userInput = myScanner.nextLine();
+                numberEntered = Integer.parseInt(userInput);    /* invalid numbers will keep while loop running,
+                                                                    valid numbers will direct user to end message */
+        }
 
         //print number and exit
         System.out.println("You have entered " + numberEntered + ".");
